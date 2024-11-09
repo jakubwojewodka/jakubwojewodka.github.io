@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .container {
+            column-count: 3;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        img, picture, video {
+            max-width: 100%;
+        }
+        body{
+            background-color: #F6F5F5;
+            height: 100%;
+        }
+
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (max-width: 768px) {
+            h1,h2,h3,h4,h5,h6,p ,a {
+            font-family: sans-serif;
+            text-align: center;
+            }
+            img, picture, video {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                border-radius: 10%;
+            }
+            .card.container{
+                box-shadow:0 100px 20px 0 rgba(0, 0, 0, 0.2);
+                width: 50%;
+                display: block;
+            }
+             /* Style the navigation menu */
+            .topnav {
+              overflow: hidden;
+              background-color: #1687A7;
+              position:relative;
+            }
+
+            /* Hide the links inside the navigation menu (except for logo/home) */
+            .topnav #myLinks {
+              display: none;
+            }
+
+            /* Style navigation menu links */
+            .topnav a {
+              color: #F6F5F5;
+              padding: 14px 16px;
+              text-decoration: none;
+              font-size: 17px;
+              display: block;
+            }
+
+            /* Style the hamburger menu */
+            .topnav a.icon {
+              background: black;
+              display: block;
+              position: absolute;
+              right: 0;
+              top: 0;
+            }
+
+            /* Add a grey background color on mouse-over */
+            .topnav a:hover {
+              background-color: #D3E0EA;
+              color: black;
+            }
+
+            /* Style the active link (or home/logo) */
+            .active {
+              background-color: #276678;
+              color: #F6F5F5;
+            } 
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            img, picture, video {
+                max-width: 100%;
+            }
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <head>
+        <link rel="stylesheet" href="homepage.css">
+        <title> ★ Wojewódka 2024 ★ </title>
+    </head>
+    <body>
+         <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Top Navigation Menu -->
+                <div class="topnav">
+                <a href="homepage.html" class="active">Zagłosuj!</a>
+                <!-- Navigation links (hidden by default) -->
+                <div id="myLinks">
+                <a href="news.html">Program</a>
+                <a href="contact.html">Kontakt</a>
+                <a href=about.html">O mnie</a>
+                </div>
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        </div> 
+        <h1>TWÓJ PRZEWODNICZĄCY</h1>
+        <h2>Jakub Wojewódka</h2>
+        <div class="card">
+            <img src="portret.png" alt="Obraz">
+            <div class="container">
+        </div>
+        </div>
+        <h3>Wybory w piątek 22 listopada</h3>
+    </body>
+    <script>
+        /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+           x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+    } 
+    </script>
+</html>
