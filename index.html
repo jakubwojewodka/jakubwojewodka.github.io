@@ -6,10 +6,12 @@
     video {
       max-width: 100%;
     }
+
     body {
       background-color: #f6f5f5;
       height: 100%;
     }
+
     h1,
     h2,
     h3,
@@ -21,24 +23,33 @@
       font-family: sans-serif;
       text-align: center;
     }
+
     img,
     picture,
     video {
       display: block;
       margin-left: auto;
       margin-right: auto;
-      max-width: 75%;
-      max-height: 75%;
+      width: 50%;
       border-radius: 10%;
     }
+
+    .card.container {
+      box-shadow: 0 100px 20px 0 rgba(0, 0, 0, 0.2);
+      width: 50%;
+      display: block;
+    }
+
     .topnav {
       overflow: hidden;
       background-color: #1687a7;
       position: relative;
     }
+
     .topnav #myLinks {
       display: none;
     }
+
     .topnav a {
       color: #f6f5f5;
       padding: 14px 16px;
@@ -46,6 +57,7 @@
       font-size: 17px;
       display: block;
     }
+
     .topnav a.icon {
       background: black;
       display: block;
@@ -53,6 +65,7 @@
       right: 0;
       top: 0;
     }
+
     .topnav a:hover {
       background-color: #d3e0ea;
       color: black;
@@ -64,19 +77,20 @@
     }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <head>
     <link rel="stylesheet" href="homepage.css" />
     <title>★ Wojewódka 2024 ★</title>
   </head>
+
   <body>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <div class="topnav">
-      <a href="index.html" class="active">Strona Główna</a>
+      <a href="index.html" class="active">Program</a>
       <div id="myLinks">
-        <a href="program.html">Program</a>
         <a href="kontakt.html">Kontakt</a>
         <a href="about.html">O mnie</a>
       </div>
@@ -84,11 +98,37 @@
         <i class="fa fa-bars"></i>
       </a>
     </div>
-    <h1>TWÓJ PRZEWODNICZĄCY</h1>
-    <img src="portret.png" alt="Obraz" />
-    <h2>Jakub Wojewódka</h2>
-    <h3>Wybory za:</h3>
-    <h3 id="timer"></h3>
+    <h1>MOJE POSTULATY</h1>
+    <h3>1. NIE 🛑 dla obowiązkowych wydarzeń międzyklasowych!</h3>
+    <p>
+      Moim zdaniem eventy powinny być opcjonalne - presja ze strony z góry
+      ustalonej grupy nie jest przyjemna.
+    </p>
+    <p>
+      Zadania czy zagadki mogą być rozwiązywane indywidualnie lub w małych
+      grupkach przez osoby zainteresowane!
+    </p>
+    <p>
+      Nie należy naciskać na osoby które nie chcą brać udziału w wydarzeniach
+      rekreacyjnych.
+    </p>
+    <h3>2. Samorząd powinien brać pod uwagę zdanie innych uczniów</h3>
+    <p>
+      Uważam, że powinniśmy brać pod uwagę opinie osób, których nasze decyzje
+      mają dotyczyć.
+    </p>
+    <p>
+      Wybranie do samorządu nie oznacza jeszcze, że magicznie wie się, czego
+      chcą inni!
+    </p>
+    <p>
+      Zadbam o to, żeby każda nasza decyzja była skonsultowana z ogółem, np.
+      przez ankiety.
+    </p>
+    <h3>3. Transparentność samorządu</h3>
+    <p>Każda decyzja i każdy głos każdego członka samorządu powinny być spisane i łatwo dostępne dla każdej osoby w szkole.</p>
+    <p></p>
+    <p></p>
   </body>
   <script>
     function clickFunction() {
@@ -99,19 +139,5 @@
         x.style.display = "block";
       }
     }
-var countDownDate = new Date("Nov 22, 2024 14:20:0").getTime();
-var x = setInterval(function() {
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  document.getElementById("timer").innerHTML = days + " dni";
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("timer").innerHTML = "EXPIRED";
-  }
-}, 1000);
   </script>
 </html>
